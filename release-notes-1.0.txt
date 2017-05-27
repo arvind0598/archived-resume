@@ -1,7 +1,0 @@
-basic webpage for desktop view
-minimal animation using :hover css
-link to facebook at bottom
-page is monochrome except fb link
-
---
-next? mobile-compatible
