@@ -1,41 +1,115 @@
 body
 {
   height: 100vh;
-  max-width: 90%;
-  background-color: #E0E0E0;
+  background-color: #74AFAD;
   font-family: 'Roboto', serif;
   margin: 0 auto;
-  cursor: pointer;
   overflow: hidden;
+}
+
+.not_intro
+{
+  display: none;
+  margin-top: 5vh;
+}
+
+#intro
+{
+  display: block;
+  height: 100vh;
+  background-color: #3F51B5;
+  padding: 10vh;
+  overflow: hidden;
+}
+
+#intro > *
+{
+  margin: 10vh auto;
+}
+
+#button_intro
+{
+  content: " ";
+  width: 0;
+  height: 0;
+  border: 5vh solid transparent;
+  border-top-color: #E8EAF6;
+  border-bottom-style: none;
+  margin: 0 auto;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  bottom: 1vh;
+}
+
+#button_intro:hover
+{
+  border-top-style: ridge;
+  border-top-color: #FFB300;
+}
+
+@keyframes bounce
+{
+  0% { transform: translateY(0);}
+  10% { transform: translateY(-1vh);}
+  20% { transform: translateY(-2vh);}
+  30% { transform: translateY(-3vh);}
+  40% { transform: translateY(-2vh);}
+  50% { transform: translateY(-1vh);}
+  60% { transform: translateY(-2vh);}
+  70% { transform: translateY(-3vh);}
+  80% { transform: translateY(-2vh);}
+  90% { transform: translateY(-1vh);}
+  100%{ transform: translateY(0);}
+}
+
+.bounce
+{
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
+  animation-timing-function: linear;
 }
 
 h1,h2
 {
   text-align: center;
+  margin: 0;
 }
 
-h1::selection
+h1
 {
-  background: rgba(205,92,92,0.5);
+  color: #E8EAF6;
+  font-family: 'Neuton', serif;
+  font-size: 40vh;
+  line-height: 40vh;
+  letter-spacing: 1vh;
 }
 
 h2
 {
-  color: black;
-  background-color: white;
-  border: 1px solid rgba(255,255,255,0.9);
-  border-radius: 30px;
-  padding: 1%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  width: 96.5%;
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
+  color: #263238;
+  font-size: 20px;
+  line-height: 25px;
 }
 
-h2:hover
+#button_up
 {
-  transform: scale(1.01);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  content: " ";
+  width: 0;
+  height: 0;
+  border: 5vh solid transparent;
+  border-bottom-color: #FFFFFF;
+  border-top-style: none;
+  margin: 5vh auto;
+}
+
+#button_up:hover
+{
+  border-bottom-style: ridge;
+  border-bottom-color: #FFB300;
 }
 
 h3
@@ -48,12 +122,12 @@ a
 {
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 a:visited
 {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .row
@@ -73,34 +147,18 @@ a:visited
   border-radius: 10px;
   height: 150px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: #D9853B;
+  color: #ECECEA;
 
   transition: all .3s ease;
   -webkit-transition: all .3s ease;
-}
-
-.box-obj
-{
-  background-color: #0097A7;
-  color: #E0F7FA;
-}
-
-.box-exp
-{
-  background-color: #689F38;
-  color: #F1F8E9;
-}
-
-.box-edu
-{
-  background-color: #AFB42B;
-  color: #F9FBE7;
 }
 
 .block-title
 {
   text-align: center;
   position: relative;
-  padding: 17% 0 17% 0;
+  top: calc(50% - 1em);
 }
 
 .block-info
@@ -113,24 +171,10 @@ a:visited
 /*...block hover animation begins here...*/
 .block:hover
 {
+  background-color: #ce7d35;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22), inset 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
-}
-
-.box-obj:hover
-{
-  background-color: #00838F;
-}
-
-.box-exp:hover
-{
-  background-color: #558B2F;
-}
-
-.box-edu:hover
-{
-  background-color: #9E9D24;
 }
 
 .block:hover .block-info
@@ -163,33 +207,38 @@ a:visited
 
 .wrapper > h3
 {
-  text-align: center;
-  text-indent: -20%;
+  text-align: left;
+  text-indent: 10%;
 }
 
 #contact
 {
   text-align: center;
-  width: 90%;
-  background-color: rgba(69, 39, 160, 0.5);
-  border-radius: 50% / 100%;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  bottom: 0;
-  padding: 1% 0 0.1% 0;
-  margin: 0 auto;
+  width: 100%;
+  background-color: #FAFAFA;
+  top: 0;
+  padding: 0;
+  margin: 0 auto 10vh auto;
   position: fixed;
-}
-
-#contact:hover
-{
-  background-color: rgba(69, 39, 160, 0.8);
 }
 
 #contact > li
 {
   display: inline-block;
-  margin: 0 5% 0 5%;
+  margin: 0;
+  padding: 2vh 10vh;
+  border-left: solid 1px black;
+  box-sizing: border-box;
+}
+
+#contact > li:first-child
+{
+  border: none;
+}
+
+#contact > li:hover
+{
+  background-color: #E0E0E0;
 }
 
 @media only screen and (max-width: 700px)
@@ -201,16 +250,17 @@ a:visited
   }
   h1
   {
-    font-size: 30px;
+    font-size: 10vh;
+    line-height: 20vh;
   }
   h2
   {
-    font-size: 20px;
-    margin: 0 auto;
+    font-size: 5vh;
+    line-height: 6vh;
   }
-  h3
+  #intro
   {
-    font-size: 15px;
+    overflow: hidden;
   }
   .block
   {
@@ -226,14 +276,20 @@ a:visited
   .wrapper > h3
   {
     text-indent: 0;
+    text-align: center;
   }
-  #resources
+  .wrapped
   {
-    margin-bottom: 7%;
+    max-width: 100%;
   }
-  #contact
+  #contact > li
   {
-    border-radius: 0;
-    width: 100%;
+    border: 1px solid black;
+    margin: 0.5vh;
+  }
+  #contact > li:first-child
+  {
+    border: 1px solid black;
+    margin: 0.5vh;
   }
 }
