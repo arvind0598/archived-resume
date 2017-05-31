@@ -3,8 +3,8 @@ $(document).ready(function()
 
   $("#button_intro").click(function()
   {
-    $("#intro").css("background-color", "#70a8a6"); //dark grey
-    $("body").css("background-color", "#74AFAD"); //light grey
+    $("#intro").css("background-color", "#70a8a6"); //dark body
+    $("body").css("background-color", "#74AFAD"); //light body
     $("#intro").slideUp(1000);
     $("section").toggleClass("not_intro");
     $("#contact").fadeOut(1000);

@@ -1,4 +1,4 @@
-body
+  body
 {
   height: 100vh;
   background-color: #74AFAD;
@@ -121,8 +121,12 @@ h3
 a
 {
   text-decoration: none;
-  text-transform: uppercase;
   color: #000000;
+}
+
+#contact > li > a
+{
+  text-transform: uppercase;
 }
 
 a:visited
@@ -168,13 +172,12 @@ a:visited
   color: inherit;
 }
 
-/*...block hover animation begins here...*/
 .block:hover
 {
   background-color: #ce7d35;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22), inset 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
+  transform: scale(1.02) translateY(-2vh);
+  -webkit-transform: scale(1.02) translateY(-2vh);
 }
 
 .block:hover .block-info
@@ -228,12 +231,12 @@ a:visited
   margin: 0;
   padding: 2vh 10vh;
   border-left: solid 1px black;
-  box-sizing: border-box;
+  border-right: solid 1px transparent;
 }
 
 #contact > li:first-child
 {
-  border: none;
+  border: solid 1px transparent;
 }
 
 #contact > li:hover
@@ -241,22 +244,30 @@ a:visited
   background-color: #E0E0E0;
 }
 
+#contact > li > a > img
+{
+  display: none;
+}
+
+
 @media only screen and (max-width: 700px)
 {
   body
   {
-    max-width: 600px;
     overflow-y: auto;
   }
   h1
   {
-    font-size: 10vh;
+    font-size: 16vw;
     line-height: 20vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   h2
   {
-    font-size: 5vh;
-    line-height: 6vh;
+    font-size: 5vw;
+    line-height: 5vh;
   }
   #intro
   {
@@ -282,14 +293,25 @@ a:visited
   {
     max-width: 100%;
   }
+  #contact
+  {
+    margin: 0;
+    padding: 0;
+  }
   #contact > li
   {
-    border: 1px solid black;
-    margin: 0.5vh;
+    display: inline-block;
+    border: none;
+    margin: 0 auto;
+    padding: 5%;
   }
-  #contact > li:first-child
+  #contact > li > a > img
   {
-    border: 1px solid black;
-    margin: 0.5vh;
+    display: block;
   }
+  #contact > li > a > p
+  {
+    display: none;
+  }
+
 }
