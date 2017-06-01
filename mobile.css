@@ -1,0 +1,90 @@
+@media only screen and (max-width: 700px)
+{
+  body
+  {
+    overflow-y: auto;
+  }
+  h1
+  {
+    top: 30vh;
+    font-size: 22vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 > span
+  {
+    display: none;
+  }
+  h2
+  {
+    font-size: 5vw;
+    line-height: 5vh;
+  }
+  .block
+  {
+    float: none;
+    margin: 2% auto;
+    width: 50%;
+  }
+  .block-2
+  {
+    display: block;
+    width: 50%;
+    position: relative;
+  }
+  #box-edu
+  {
+    position: relative;
+    right: 0;
+  }
+  #box-exp
+  {
+    position: relative;
+    left: 0;
+  }
+  .wrapper
+  {
+    position: relative;
+    left: 5vw;
+  }
+  .wrapper > h3
+  {
+    text-indent: 0;
+    text-align: center;
+  }
+  #skills
+  {
+    position: relative;
+    top: 25vh;
+    width: 100vw;
+  }
+  #resources
+  {
+    position: relative;
+    top: 25vh;
+    right: 0;
+    max-width: none;
+  }
+  #contact
+  {
+    margin: 0;
+    padding: 0 0 5vh 0;
+  }
+  #contact > li
+  {
+    display: inline-block;
+    border: none;
+    margin: 0 auto;
+    padding: 5%;
+  }
+  #contact > li > a > img
+  {
+    display: block;
+  }
+  #contact > li > a > p
+  {
+    display: none;
+  }
+
+}
