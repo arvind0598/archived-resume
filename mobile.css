@@ -57,14 +57,14 @@
   {
     position: relative;
     top: 25vh;
-    width: 100vw;
+    width: 90vw;
   }
   #resources
   {
     position: relative;
     top: 25vh;
     right: 0;
-    max-width: none;
+    max-width: 90vw;
   }
   #contact
   {
