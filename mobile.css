@@ -2,89 +2,193 @@
 {
   body
   {
-    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
   }
+
   h1
   {
-    top: 30vh;
-    font-size: 22vw;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    width: 90vw;
+    top: 20vh;
+    font-size: 25vw;
+    position: relative;
+    margin: 0 auto;
   }
+
   h1 > span
   {
     display: none;
   }
+
   h2
   {
-    font-size: 5vw;
-    line-height: 5vh;
-  }
-  .block
-  {
-    float: none;
-    margin: 2% auto;
-    width: 50%;
-  }
-  .block-2
-  {
-    display: block;
-    width: 50%;
+    top: 40vh;
+    font-size: 8vw;
+    line-height: 10vw;
     position: relative;
-  }
-  #box-edu
-  {
-    position: relative;
-    right: 0;
-  }
-  #box-exp
-  {
-    position: relative;
-    left: 0;
-  }
-  .wrapper
-  {
-    position: relative;
-    left: 5vw;
-  }
-  .wrapper > h3
-  {
-    text-indent: 0;
-    text-align: center;
-  }
-  #skills
-  {
-    position: relative;
-    top: 25vh;
+    margin: 0 auto;
     width: 90vw;
   }
-  #resources
-  {
-    position: relative;
-    top: 25vh;
-    right: 0;
-    max-width: 90vw;
-  }
-  #contact
-  {
-    margin: 0;
-    padding: 0 0 5vh 0;
-  }
-  #contact > li
-  {
-    display: inline-block;
-    border: none;
-    margin: 0 auto;
-    padding: 5%;
-  }
-  #contact > li > a > img
+
+  #anchor_main
   {
     display: block;
   }
-  #contact > li > a > p
+
+  .block
   {
-    display: none;
+    height: 25vh;
+    width: 60vw;
+    padding: 1vw 0;
+    margin: 5vh auto;
+    display: block;
+  }
+
+  .block-title
+  {
+    line-height: 25vh;
+  }
+
+  .block:hover .block-info
+  {
+    display: block;
+    padding: 10% auto;
+  }
+
+  .extra > div > h3
+  {
+    font-size: 15vw;
+    line-height: 16vw;
+  }
+
+  .extra > div
+  {
+    font-size: 4vmin;
+  }
+
+  #anchors
+  {
+    background-color: #000;
+    text-transform: uppercase;
+
+    list-style: none;
+    height: 35vh;
+    width: 100vw;
+
+    position: fixed;
+
+    font-size: 5vw;
+
+    z-index: 5;
+    line-height: 10vw;
+    padding: 0;
+
+    transition: all .3s ease;
+  }
+
+  #anchors > li
+  {
+    display: block;
+    text-align: center;
+  }
+
+  #anchors.close
+  {
+    line-height: 0;
+    font-size: 0;
+    height: 2vh;
+    width: 100vw;
+  }
+
+  .arrow
+  {
+    display: block;
+    left: calc(50vw - 4vh);
+    border-top: 5vh solid black;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
+    position: fixed;
+    content: '';
+    margin: 0 auto;
+    padding: 0;
+    top: 2vh;
+  }
+
+  #site_wrap
+  {
+    transition: all .3s ease;
+    transform: translateY(35vh);
+  }
+
+}
+
+@media only screen and (max-width: 700px) and (orientation: landscape)
+{
+  h1
+  {
+    top: 2vh;
+  }
+
+  h2
+  {
+    font-size: 4vw;
+    line-height: 5vw;
+    top: 7vh;
+    width: 55vw;
+  }
+
+  #anchors
+  {
+    background-color: #000;
+    text-transform: uppercase;
+
+    list-style: none;
+    height: 100vh;
+    width: 15vw;
+    margin: 0;
+
+    position: fixed;
+
+    font-size: 2.5vw;
+
+    z-index: 5;
+    line-height: 5vw;
+    padding: calc(50vh - 2.5em - 10vh) 0;
+
+    transition: all .3s ease;
+  }
+
+  #anchors.close
+  {
+    height: 100vh;
+    line-height: 2vh;
+    font-size: 0;
+    width: 2vw;
+  }
+
+  #site_wrap
+  {
+    transition: all .3s ease;
+    transform: translateX(15vw);
+  }
+
+  #site_wrap.close
+  {
+    transform: none;
+  }
+
+  .arrow
+  {
+    display: block;
+    top: calc(50vh - 4vw);
+    border-left: 5vw solid black;
+    border-top: 4vw solid transparent;
+    border-bottom: 4vw solid transparent;
+    position: fixed;
+    content: '';
+    margin: 0 auto;
+    padding: 0;
+    left: 2vw;
   }
 
 }
