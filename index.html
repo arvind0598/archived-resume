@@ -1,101 +1,110 @@
-<head>
+<html>
+  <head>
+    <title> Arvind </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300" rel="stylesheet">
+    <link href = "main.css" rel = "stylesheet">
+    <link href = "desktop.css" rel = "stylesheet" media = "screen and (min-width: 40.5em)">
 
-  <title> Arvind </title>
-  <link href = "favicon.ico" rel = "icon">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" async> </script>
+    <script src = "script.js" async> </script>
 
-  <link href = "https://fonts.googleapis.com/css?family=Neuton:700&text=Arvind%20S" rel = "stylesheet">
-  <link href = "https://fonts.googleapis.com/css?family=Roboto" rel = "stylesheet">
+    <meta name = "author" content = "Arvind">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta name = "description" content = "A mobile-first design for my new Portfolio">
 
-  <link href = "main.css" rel = "stylesheet">
-  <link href = "mobile.css" rel = "stylesheet">
+    <link href = "a.ico" rel = "icon" type = "image/x-icon">
+  </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src = "script.js" async> </script>
-
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <meta name = "author" content = "Arvind">
-  <meta name = "description" content = "Check out Arvind's attempt at his resume">
-
-</head>
-
-<body>
-
-<div class = "hover">
-  <ul id = "anchors" class = "close">
-    <li><a href = "#intro"> Intro </a></li>
-    <li><a href = "#anchor_main"> Main </a></li>
-    <li><a href = "#anchor_skills"> Skills </a></li>
-    <li><a href = "#anchor_social"> Contact </a></li>
-    <li><a href = "#anchor_resources"> Resources </a><li>
-  </ul>
-  <div class = "arrow"></div>
-</div>
-
-  <div id = "site_wrap" class = "close">
+  <body>
 
     <section id = "intro">
-      <h1>Arvind <span>S</span></h1>
-      <h2>This  is a dynamically maintained resume.</br> New features added everytime I learn something.</h2>
-    </section>
-
-    <section id = "anchor_main">
-
-        <div class = "block" id = "box-exp">
-          <h3 class = "block-title"> Experience </h3>
-          <p class = "block-info"> Actively Looking. </p>
+      <header>
+        <a href = "#intro"> Arvind </a>
+        <input type = "checkbox">
+        <div class = "ham">
+          <span> </span>
+          <span> </span>
+          <span> </span>
         </div>
-
-        <div class = "block" id = "box-obj">
-          <h3 class = "block-title"> Objective </h3>
-          <p class = "block-info"> To maintain a record of what I learn and to parallely obtain valuable experience. </p>
-        </div>
-
-        <div class = "block" id = "box-edu">
-          <h3 class = "block-title"> Education </h3>
-          <p class = "block-info"> 10th - 10 CGPA </br> 12th - 90.6 % </br> 1st year avg. - 8.19 GPA </p>
-        </div>
-
-      </section>
-
-    <section id = "anchor_skills" class = "extra">
-      <div>
-        <h3> Skills </h3>
         <ul>
-          <li> Languages
-            <ul>
-              <li> Proficient:<br/>C C++ </li>
-              <li> Working Knowledge:<br/>CSS Ruby Haskell Python </li>
-              <li> Basic:<br/> Javascript Java Jquery</li>
-              <li> Next:<br/> AngularJS Node.js </li>
-            </ul>
-          </li>
-          <li> Soft Skills: Presentation-Making Speaking Writing </li>
-          <li> Hobbies: Football Drawing Coding Photography</li>
+          <li> <a href = "#main"> Objective </a> </li>
+          <li> <a href = "#skills"> Skills </a> </li>
+          <li> <a href = "#portfolio"> Portfolio </a> </li>
+          <li> <a href = "#social"> Contact </a> </li>
         </ul>
-      </div>
-    </section>
-
-    <section id = "anchor_social" class = "extra">
+      </header>
       <div>
-        <h3> Find Me </h3>
-        <a href = "https://www.facebook.com/arvind0598" id = "fb"> Facebook </a>
-        <a href = "https://www.github.com/arvind0598" id = "gh"> Github </a>
-        <a href = "https://www.linkedin.com/arvind0598" id = "li">LinkedIn </a>
+        <h1> Arvind </h1>
+        <h2 class = "mobile"> Aspiring Full Stack Developer. </br> Novice Competitive Coder. </br> Passionate Learner. </h2>
       </div>
     </section>
 
-    <section id = "anchor_resources" class = "extra">
+    <section id = "main">
       <div>
-        <h3> Resources </h3>
-        <ul>
-          <li> <a href = "https://fonts.google.com/" target = "_blank"> Google Fonts </a> </li>
-          <li> <a href = "https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d" target = "_blank"> Material Shadow Helper - Florian Kutschera </a> </li>
-          <li> <a href = "https://material.io/guidelines/style/color.html#color-color-tool" target = "_blank"> Material Colour Palette - material.io </a> </li>
-          <li> <a href = "https://www.onlinewebfonts.com/" target = "_blank"> Social Icons - Online Web Fonts </a> </li>
-        </ul>
+      <div class = "box">
+        <h3> Objective </h3>
+        <hr>
+        <p> To maintain a continuously expanding project that displays sufficient knowledge and experience in front-end development. </p>
+      </div>
+      <div class = "box">
+        <h3> Education </h3>
+        <hr>
+        <p> CBSE 10th - 10 CGPA <br/> CBSE 12th - 90.6% </br>
+            Currently studying Computers and Communication in MIT Manipal, India. </p>
+      </div>
+    </div>
+    </section>
+
+    <section id = "skills">
+      <div>
+      <h2> Skills </h2>
+      <hr>
+      <p>
+        Primarily interested in algorithms and development using C++, and sometimes PYTHON and RUBY. </br>
+        Basic knowledge of JS, MATLAB and HASKELL and have a rudimentary idea of machine learning. </br>
+        I like to think I have highly readable, and modular style of writing code. </br>
+        I'm also an amateur photographer and designer considerably experienced with Adobe Photoshop CS6. </br>
+        Currently getting into front-end development with HTML5, CSS3 and JQuery.
+      </p>
+    </div>
+    </section>
+
+    <section id = "portfolio">
+      <div>
+        <h2> Portfolio </h2>
+        <hr>
+        <div class = "placeholder">
+          <div> </div>
+          <div> </div>
+          <div> </div>
+          <div> </div>
+          <div> </div>
+          <div> </div>
+        </div>
+        <p> Placeholders </p>
       </div>
     </section>
 
-  </div>
+    <section id = "social">
+      <div>
+        <div class = "image">
+          <h2> Reach Me </h2>
+          <img src = "arv.jpg">
+        </div>
+        <div class = "buttons">
+          <a href = "https://facebook.com/arvind0598" target = "_blank"> Facebook </a>
+          <a href = "https://github.com/arvind0598" target = "_blank"> Github </a>
+          <a href = "https://linkedin.com/in/arvind0598" target = "_blank"> LinkedIn </a>
+          <a href = "mailto: arvind0598@gmail.com" target = "_top"> Mail me here</a>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <footer>
+      <hr>
+      <p> Designed by Arvind Suresh </p>
+    </footer>
+
+  </body>
+
+</html>
