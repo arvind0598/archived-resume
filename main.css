@@ -1,0 +1,286 @@
+body
+{
+  background-color: #ECEFF1;
+  margin: 0 auto;
+}
+
+header
+{
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  height: 7vmax;
+  top: 0;
+}
+
+header > a
+{
+  position: fixed;
+  left: 0;
+  font-size: 3.6vmax;
+  top: 0;
+  margin: 1.25vmax auto;
+}
+
+.ham
+{
+  position: absolute;
+  right: 0;
+  height: 7vmax;
+  width: 6vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  top: 1.5vmax;
+}
+
+.ham > span
+{
+  display: block;
+  background: #ECEFF1;
+  border-radius: 0.5vmax;
+  height: 1.2vmin;
+  width: 4vmax;
+  margin: 0.5vmin auto;
+  z-index: 2;
+}
+
+input
+{
+  position: absolute;
+  top: 1.5vmax;
+  right: 0;
+  z-index: 3;
+  height: 7vmax;
+  width: 6vmax;
+  opacity: 0;
+}
+
+input:checked ~ ul
+{
+  opacity: 1;
+}
+
+.ham > span
+{
+  transition: 0.2s all;
+}
+
+input:checked ~ .ham > span:nth-of-type(1)
+{
+  transform: rotate(-45deg) translate(-1vmin, 2vmin);
+}
+
+input:checked ~ .ham > span:nth-of-type(2)
+{
+  transform: translateX(1.5vmin);
+  opacity: 0;
+}
+
+input:checked ~ .ham > span:nth-of-type(3)
+{
+  transform: rotate(45deg) translate(-1vmin, -2vmin );
+}
+
+header > ul
+{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  list-style: none;
+  z-index: 1;
+  top: 5vmax;
+  background: black;
+  margin: 0;
+  padding: 1vmax;
+  transition: 0.3s all;
+}
+
+header > ul > li
+{
+  margin: 2vmin auto;
+  font-size: 3.2vmax;
+}
+
+section:nth-of-type(even)
+{
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+section:nth-of-type(odd)
+{
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.16);
+}
+
+h1, h2, h3
+{
+  margin: 1vmin auto;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+h1
+{
+  text-transform: uppercase;
+  font-size: 22vw;
+}
+
+h1 + h2
+{
+  color: #999999;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2
+{
+  margin-bottom: 1vmin;
+}
+
+h3
+{
+  font-size: 6vmin;
+}
+
+p
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.1vw;
+  font-size: 4vmin;
+  line-height: 5vmin;
+  max-width: 90vw;
+}
+
+a, a:visited
+{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  margin: 4vmin;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section
+{
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 + hr
+{
+  height: 0;
+  max-width: 80vmin;
+  margin: 0 auto;
+}
+
+h2 + hr
+{
+  height: 0;
+  margin: 0 auto;
+  border-bottom: 1vh;
+  max-width: 90vmax;
+}
+
+.box
+{
+  width: 90vmin;
+  margin: 1vmax auto 2vmax auto;
+}
+
+.placeholder
+{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.placeholder > div
+{
+  height: 22vmin;
+  width: 45vmin;
+  margin: 2vmin auto;
+  background-color: #CFD8DC;
+  box-shadow: inset 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.placeholder + p
+{
+  font-style: italic;
+  margin: 1vmin auto -1vmin auto;
+  text-align: center;
+}
+
+h2:not(.mobile)
+{
+  font-size: 12vmin;
+}
+
+#social > div
+{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons
+{
+  margin: 0 1vmin 0 3vmax;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  user-select: none;
+}
+
+.buttons > a
+{
+  text-transform: uppercase;
+  margin: 2vmin auto;
+  width: 40vmin;
+  padding: 3vmin 5vmin;
+  background-color: black;
+  color: white;
+  font-size: 2.5vmax;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.buttons > a:hover
+{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translateY(-2vmin);
+  -webkit-transform: translateY(-2vmin);
+}
+
+img
+{
+  width: 30vmin;
+  margin: 0 auto;
+  border-radius: 30vmin;
+  border: 0.5vmin solid black;
+}
+
+.image
+{
+  display: flex;
+  flex-flow: column;
+}
+
+footer > p
+{
+  text-align: center;
+  margin: 1vmax auto;
+}
+
+footer > hr
+{
+  width: 90vmin;
+  margin: 0 auto;
+}
