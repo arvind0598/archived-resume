@@ -6,14 +6,16 @@
     visibility: hidden;
   }
 
-  header
+  h1
   {
+    font-size: 14vw;
+    margin-bottom: 3vw;
   }
 
   header > a
   {
-    padding: 0;
-    left: 1vmin;
+    padding: 1vmin;
+    left: 3vmin;
   }
 
   header > ul
@@ -42,8 +44,28 @@
 
   #social > div
   {
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .placeholder > div
+  {
+    height: 35vmin;
+    width: 35vmin;
+  }
+
+  #tribute > img
+  {
+    height: calc(35vmin - 2px);
+    width: calc(35vmin - 2px);
   }
 
 }
