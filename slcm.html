@@ -13,6 +13,47 @@
 	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
 	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous"> -->
 	<!-- <link rel="stylesheet" href="main.css"> -->
+
+	<style>
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	form {
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #E0E0E0;
+	}
+
+	form > * {
+		padding: 5px;
+		width: 250px;
+		margin: 5px;
+	}
+
+	button {
+		text-transform: uppercase;
+		color : #FFF;
+		font-weight: 300;
+		background: #f58220;
+		border: 1px solid #EF6C00;
+		outline: 0;
+		padding : 10px;
+		letter-spacing: 1px;
+		transition: all 300ms;
+	}
+
+	button:hover {
+		background: #EF6C00;
+	}
+
+	</style>
 </head>
 
 <body>
@@ -42,7 +83,7 @@
 		console.log($("#slcm").serialize());
 		$.ajax({
 			type : "POST",
-			url : "http://slcm-api.appspot.com/api",
+			url : "https://slcm-api.appspot.com/api",
 			data : $("#slcm").serialize(),
 			success : data => {
 				for(key in data.courses) {
