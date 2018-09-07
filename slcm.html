@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head> 
+	<title> Arvind </title> 
+	<link href="main.css" rel="stylesheet" async> 
+	<!-- <link href="desktop.css" rel="stylesheet" media="screen and (min-width: 40.5em)" async>  -->
+	<meta name="author" content="Arvind"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="A mobile-first design for my new Portfolio">
+	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+
+<body>
+	<form id="slcm">
+		<input type="text" placeholder="Registration Number" name="username"/>
+		<input type="password" placeholder="Password" name="password"/>
+		<button> Submit </button>
+	</form>
+	<div style="overflow-x: auto">
+		<table id="results">
+			<tr>
+				<th> Course Name </th>
+				<th> Semester </th>
+				<th> Credits </th>
+				<th> Present </th>
+				<th> Total </th>
+				<th> Percentage </th>
+			</tr>
+		</table>
+	</div>
+</body>
+
+<script src="jquery.min.js"></script>
+<script>
+	let table = document.getElementById("results");
+	$("#slcm").on("submit", e => {
+		console.log($("#slcm").serialize());
+		$.ajax({
+			type : "POST",
+			url : "http://slcm-api.appspot.com/api",
+			data : $("#slcm").serialize(),
+			success : data => {
+				for(key in data.courses) {
+					console.log(data.courses[key], data.att[key]);
+					let row = table.insertRow(-1);
+					row.insertCell(0).innerHTML = data.courses[key].name;
+					row.insertCell(1).innerHTML = data.courses[key].sem;
+					row.insertCell(2).innerHTML = data.courses[key].cred;
+					row.insertCell(3).innerHTML = data.att[key].present;
+					row.insertCell(4).innerHTML = data.att[key].total;
+					row.insertCell(5).innerHTML = Math.ceil(parseFloat(data.att[key].present) * 100 / parseFloat(data.att[key].total));
+				}
+			}
+		});
+		e.preventDefault();
+		e.stopPropogation();
+		return false;
+	});
+</script>
+
