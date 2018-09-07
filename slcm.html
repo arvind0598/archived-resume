@@ -17,8 +17,8 @@
 
 <body>
 	<form id="slcm">
-		<input type="text" placeholder="Registration Number" name="username"/>
-		<input type="password" placeholder="Password" name="password"/>
+		<input type="text" placeholder="Registration Number" name="username" pattern="^1[6-8]09[0-9].{4}$" required/>
+		<input type="password" placeholder="Password" name="password" required/>
 		<button> Submit </button>
 	</form>
 	<div style="overflow-x: auto">
@@ -58,7 +58,7 @@
 			}
 		});
 		e.preventDefault();
-		e.stopPropogation();
+		e.stopPropagation();
 		return false;
 	});
 </script>
