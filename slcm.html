@@ -2,17 +2,12 @@
 
 <html lang="en">
 <head> 
-	<title> Arvind </title> 
+	<title> SLCM </title> 
 	<link href="main.css" rel="stylesheet" async> 
-	<!-- <link href="desktop.css" rel="stylesheet" media="screen and (min-width: 40.5em)" async>  -->
 	<meta name="author" content="Arvind"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="A mobile-first design for my new Portfolio">
 	<meta charset="utf-8"/>
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous"> -->
-	<!-- <link rel="stylesheet" href="main.css"> -->
 
 	<style>
 
@@ -63,15 +58,17 @@
 		<button> Submit </button>
 	</form>
 	<div style="overflow-x: auto">
-		<table id="results">
-			<tr>
+		<table>
+			<thead>
 				<th> Course Name </th>
 				<th> Semester </th>
 				<th> Credits </th>
 				<th> Present </th>
 				<th> Total </th>
 				<th> Percentage </th>
-			</tr>
+			</thead>
+			<tbody id="results">
+			</tbody>
 		</table>
 	</div>
 </body>
@@ -80,12 +77,14 @@
 <script>
 	let table = document.getElementById("results");
 	$("#slcm").on("submit", e => {
-		console.log($("#slcm").serialize());
+		// console.log($("#slcm").serialize());
 		$.ajax({
 			type : "POST",
-			url : "https://slcm-api.appspot.com/api",
+			url : "https://obscure-taiga-34402.herokuapp.com/",
 			data : $("#slcm").serialize(),
 			success : data => {
+				// console.log(data);
+				table.innerHTML = data.error ? data.error_reason : "";
 				for(key in data.courses) {
 					console.log(data.courses[key], data.att[key]);
 					let row = table.insertRow(-1);
