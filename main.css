@@ -18,6 +18,10 @@ section {
 	scroll-behavior: smooth;
 }
 
+.no-transition {
+	transition: unset;
+}
+
 @keyframes fancy-gradient {
 	0% {background-position: 80% 0%;}
 	50% {background-position: 20% 100%;}
