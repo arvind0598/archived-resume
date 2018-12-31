@@ -2,8 +2,11 @@ const path = require('path');
 const fs = require('fs');
 // const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const cssNano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const isDev = process.env.NODE_ENV !== 'production';
 
 const pugRule = {
   test: /\.pug$/,
@@ -16,6 +19,9 @@ const sassRule = {
     MiniCssExtractPlugin.loader,
     {
       loader: 'css-loader',
+      options: {
+        sourceMap: isDev,
+      },
     },
     {
       loader: 'postcss-loader',
@@ -23,11 +29,18 @@ const sassRule = {
         autoprefixer: {
           browsers: ['last 2 versions'],
         },
-        plugins: () => [autoprefixer],
+        sourceMap: isDev,
+        plugins: () => [
+          autoprefixer,
+          !isDev && cssNano,
+        ],
       },
     },
     {
       loader: 'sass-loader',
+      options: {
+        sourceMap: isDev,
+      },
     },
   ],
 };
@@ -38,7 +51,12 @@ const config = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
   },
-  devtool: 'source-map',
+  devtool: isDev && 'source-map',
+  devServer: {
+    port: 3000,
+    open: true,
+    contentBase: path.resolve(__dirname, '../src'),
+  },
   module: {
     rules: [pugRule, sassRule],
   },
@@ -50,6 +68,13 @@ const config = {
         filename: `${name}.html`,
         template: `src/${name}.pug`,
         inject: true,
+        minify: !isDev && {
+          html5: true,
+          collapseWhitespace: true,
+          caseSensitive: true,
+          removeComments: true,
+          removeEmptyElements: true,
+        },
       })),
     new MiniCssExtractPlugin({
       filename: '[name]-styles.css',
