@@ -1,1 +1,160 @@
-<html> <head> <title>Arvind </title> <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300" rel="stylesheet" async> <link href="main.css" rel="stylesheet" async> <link href="desktop.css" rel="stylesheet" media="screen and (min-width: 40.5em)" async> <meta name="author" content="Arvind"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="A mobile-first design for my new Portfolio"> <link href="a.ico" rel="icon" type="image/x-icon"> </head> <body> <section id="intro"> <header> <a href="#intro"> Arvind </a> <input type="checkbox"> <div class="ham"> <span> </span> <span> </span> <span> </span> </div><ul> <li> <a href="#main"> Objective </a> </li><li> <a href="#skills"> Skills </a> </li><li> <a href="#portfolio"> Portfolio </a> </li><li> <a href="#social"> Contact </a> </li></ul> </header> <div> <h1> Arvind </h1> <h2 class="mobile"> Aspiring Full Stack Developer. </br> Novice Competitive Coder. </br> Passionate Learner. </h2> </div></section> <section id="main"> <div> <div class="box"> <h3> Objective </h3> <hr> <p> To maintain a continuously expanding project that displays sufficient knowledge and experience in front-end development. </p></div><div class="box"> <h3> Education </h3> <hr> <p> CBSE 10th - 10 CGPA <br/> CBSE 12th - 90.6% </br> Currently studying Computers and Communication in MIT Manipal, India. </p></div></div></section> <section id="skills"> <div> <h2> Skills </h2> <hr> <p> Primarily interested in algorithms and development using C++. </br> Basic knowledge of JS, PYTHON, RUBY, MATLAB and HASKELL. <br>Rudimentary idea of machine learning. <br><br>I like to think I have highly readable, and modular style of writing code. </br> I'm also an amateur photographer and designer considerably experienced with Adobe Photoshop CS6. </br> Currently getting into front-end development with HTML5, CSS3 and JQuery. </br> I have future plans for learning back-end development. </br> </p></div></section> <section id="portfolio"> <div> <h2> Portfolio </h2> <hr> <div class="placeholder"> <a id="tribute" href="https://codepen.io/de_arth/full/dvLoyO/"> <img src="tribute.jpg"> </a> <a id="drums" href="https://codepen.io/de_arth/full/awRQYX/"> <img src="music.jpg"> </a> <a id="clock" href="https://codepen.io/de_arth/full/owJjwQ/"> <img src="clock.png"> </a> </div></div></section> <section id="social"> <div> <div class="image"> <h2> Reach Me </h2> <img src="arv.jpg"> </div><div class="buttons"> <a href="https://facebook.com/arvind0598" target="_blank"> Facebook </a> <a href="https://github.com/arvind0598" target="_blank"> Github </a> <a href="https://linkedin.com/in/arvind0598" target="_blank"> LinkedIn </a> </div><div class="buttons"> <a href="mailto: arvind0598@gmail.com" target="_top"> Mail me here</a> <a href="https://codepen.io/de_arth/pens/public/" target="_blank"> Codepen </a> </div></div></section> <footer> <hr> <p> Designed by Arvind Suresh </p></footer> </body><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> <script>$(document).ready(function(){$("a").on('click', function(event){if (this.hash !==""){event.preventDefault(); var hash=this.hash; $('html, body').animate({scrollTop: $(hash).offset().top}, 1000, function(){window.location.hash=hash;});}});}); </script></html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head> 
+	<title> Arvind </title> 
+	<link href="main.css" rel="stylesheet" async> 
+	<!-- <link href="desktop.css" rel="stylesheet" media="screen and (min-width: 40.5em)" async>  -->
+	<meta name="author" content="Arvind"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="A mobile-first design for my new Portfolio">
+	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+
+<body>
+	<nav id="navbar">
+		<a href="#s2"> Education </a>
+		<a href="#s3"> Skills </a>
+		<a href="#s4"> Portfolio </a>
+		<a href="#s5"> Contact </a>
+	</nav> 
+
+	<section id="s1">
+		<div class="outer">
+			<div class="inner">
+				<p> Hey, I'm Arvind. </p>
+				<p> I'm a full stack developer, kinda. </p> <p> I'm also a competitive coder, and I love to learn. </p>
+			</div>
+		</div>
+		<div class="temp">
+			PLACEHOLDER
+		</div>
+	</section>
+
+	<section id="s2">
+		<div id="education">
+			<h2> Education </h2>
+			<div class="content">
+				<div class="school">
+					<h4> MIT Manipal, 2016-2020 </h4>
+					<p> B.Tech, Computers and Communication </p>
+					<p> 8.52/10 </p>
+				</div>
+				<div class="school">
+					<h4> Delhi Public School, Navi Mumbai, 2016 </h4>
+					<p> CBSE </p> 
+					<p> 90.6/100 </p>
+				</div>
+				<div class="school">
+					<h4> Kendriya Vidyalaya, Mankhurd, 2014 </h4>
+					<p> CBSE </p> 
+					<p> 10/10 </p>
+				</div>
+			</div>
+		</div>
+
+		<div id="experience">
+			<h2> Experience </h2>
+			<div class="content">
+				<div class="offer">
+					<h4> Hindustan Petroleum, <i> Summer Intern </i> </h4>
+					<p> Built a project using Java Servlets and JSP that could import and export .xlsx files from a mySQL database. Various CSS and JS frameworks were used to provide a better end user experience.</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="offer">
+					<h4> Tech Tatva 2018, <i> System Admin </i> </h4>
+					<p> Build front end for all portals used during the fest. The system admin core committee, along with 25 organizers, automate the fest and build end to end solutions for various categories. </p>
+				</div>
+			</div>
+	</section>
+
+	<section id="s3">
+		<div class="content">
+			<h2> Web Development </h2>
+			<div>
+				<h4> Front End </h4>
+				<p> Proficient with HTML5, CSS3, vanilla JS and jQuery.</p>
+				<p> Working knowledge of VueJS, ReactJS and Redux.</p>
+			</div>
+			<div>
+				<h4> Back End </h4>
+				<p> Primarily use NodeJS with Express and mySQL. </p>
+				<p> Working knowledge of Java Servlets and PHP. </p>
+				<p> Good with DevTools and Postman. </p>
+			</div>
+		</div>
+		<div class="content">
+			<div>
+				<h2> Competitive Coding </h2>
+				<div> 
+					<p> Proficient with basic data structures and algorithms. </p>
+					<p> Primarily use C++, though I often use C, Python and Ruby. </p>
+				</div>
+			</div>
+			<div>
+				<h2> Other Stuff </h2>
+				<div>
+					<p> Readable, modular self documenting code. </p>
+					<p> Amateur Photographer </p>
+					<p> I might start a blog soon? </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="s4">
+		<h1> Under Construction </h1>
+	</section>
+
+	<footer id="s5">
+		<h2> Designed and Developed By Arvind S </h2>
+		<ul>
+			<li><i class="fab fa-facebook" id="button-fb"></i></li>
+			<li><i class="fab fa-github" id="button-gh"></i></li>
+			<li><i class="fab fa-linkedin" id="button-li"></i></li>
+			<li><i class="fa fa-envelope" id="button-gm"></i></li>
+			<li><i class="fab fa-codepen" id="button-cp"></i></li>
+		</ul>
+	</footer>
+</body>
+
+<script src="jquery.min.js"></script>
+<script>
+
+const navbar = document.getElementById("navbar");
+const portfolio_offset = document.getElementById("s4").getBoundingClientRect().top;
+
+let tops = [];
+for(let i = 1; i <= 4; i++)
+	tops.push(document.getElementById("s" + i).getBoundingClientRect().top - 5)
+
+const doScrollStuff = () => {
+	let dis = window.pageYOffset;
+	if(dis >= tops[3] || (dis <= tops[2] && dis >= tops[1])) {
+		navbar.classList.add("inverse");
+	}
+	else
+		navbar.classList.remove("inverse");
+}
+
+window.onscroll = () => doScrollStuff();
+
+$("#s4>h1").mousemove(e => {
+	let x = ((e.originalEvent.clientX  * 100 / e.target.clientWidth) | 0);
+	console.log(x);
+	$("#s4").css({
+		background : "linear-gradient(110deg, #1e130c " + x + "%, #9a8478 " + x + "%)"
+	})
+});
+
+$("#education div").addClass('no-transition');
+$("#experience div").addClass('no-transition');
+
+</script>
+
+</html>

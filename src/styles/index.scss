@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import "fonts";
+@import "colors";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include center-flex;
+    background: $background-color;
+    height: 100vh;
+}
+
+.text--title {
+    font-family: $title-font;
+    text-align: center;
+    color: $font-color;
+    font-size: 3em;
+}
