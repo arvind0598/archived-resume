@@ -1,4 +1,17 @@
 extends layout
 
+mixin link-mixin(icon, url)
+    .social
+        a(href=url)
+            i(class=icon)
+
 block content
     p.text.text--title Under Construction
+
+block footer
+    .social-wrapper
+        +link-mixin('fab fa-github', 'https://github.com/arvind0598')
+        +link-mixin('fab fa-linkedin', 'https://linkedin.com/in/arvind0598')
+        +link-mixin('fas fa-at', 'mailto:arvind0598@github.io')
+
+

@@ -12,6 +12,7 @@
 
 body {
     @include center-flex;
+    flex-direction: column;
     background: $background-color;
     height: 100vh;
     @include below(sm) {
@@ -24,4 +25,17 @@ body {
     text-align: center;
     color: $font-color;
     font-size: 3em;
+}
+
+.social-wrapper {
+    @include center-flex;
+    flex-direction: row;
+    .social {
+        color: $font-color;
+        font-size: 2em;
+        margin: 0.5em;
+        a {
+            color: $font-color;
+        }
+    }
 }
