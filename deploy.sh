@@ -1,5 +1,6 @@
-git checkout master
-yes | cp dist/ .
-git add .
-git commit -m "Build output as of $(git log '--format=format:%H' master -1)"
-git push origin master
+git checkout 2019
+touch CNAME
+echo "www.arvindsuresh.in" > CNAME
+git subtree split --prefix dist -b master
+git push -f origin master:master
+git branch -D master

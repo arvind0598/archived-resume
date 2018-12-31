@@ -32,7 +32,7 @@ const sassRule = {
         sourceMap: isDev,
         plugins: () => [
           autoprefixer,
-          !isDev && cssNano,
+          ...(isDev ? [] : [cssNano]),
         ],
       },
     },
@@ -55,7 +55,6 @@ const config = {
   devServer: {
     port: 3000,
     open: true,
-    contentBase: path.resolve(__dirname, '../src'),
   },
   module: {
     rules: [pugRule, sassRule],

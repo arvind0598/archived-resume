@@ -14,6 +14,9 @@ body {
     @include center-flex;
     background: $background-color;
     height: 100vh;
+    @include below(sm) {
+        background-color: $sample-color;
+    }
 }
 
 .text--title {
