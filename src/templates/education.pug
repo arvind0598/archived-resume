@@ -1,0 +1,31 @@
+-
+    const edudata = [
+        {
+            name : "B.Tech, Computers And Communication Engg",
+            location : "Manipal Institute Of Technology, Manipal",
+            desc : "8.52 / 10 CGPA lorem ipsum ipsum",
+        },
+        {
+            name : "CBSE, 12th Grade",
+            location : "Delhi Public School, Navi Mumbai",
+            desc : "90.6%, with 95 in Maths and Computer Science",
+        },
+        {
+            name : "CBSE, 10th Grade",
+            location : "Kendriya Vidyalaya, Mankhurd",
+            desc : "10/10 CGPA with 93.6%",
+        },
+    ]
+
+
+mixin education(name, location, desc)
+    .box.box--edu
+        h3.text--box.text--main #{name}
+        h6.text--box.text--sub
+            i #{location}
+        .text--box
+            p #{desc}
+
+h2.text--title.text--smaller Education
+for val in edudata
+    +education(val.name, val.location, val.desc)

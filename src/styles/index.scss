@@ -11,10 +11,10 @@
 }
 
 body {
-    @include center-flex;
-    flex-direction: column;
+    // @include flex(column);
     background: $background-color;
     height: 100vh;
+
     @include below(sm) {
         background-color: $sample-color;
     }
@@ -25,17 +25,53 @@ body {
     text-align: center;
     color: $font-color;
     font-size: 3em;
+    &.text--smaller {
+        font-size: 2.5em;
+    }
 }
 
-.social-wrapper {
-    @include center-flex;
-    flex-direction: row;
-    .social {
+.nav--vertical {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper {
+    @include flex(column);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    .box {
         color: $font-color;
-        font-size: 2em;
-        margin: 0.5em;
-        a {
-            color: $font-color;
+        font-family: $primary-font;
+        width: 45vw;
+        margin: 10px;
+        // background: white;
+        @include below(sm) {
+            width: 90vw;
+        }
+
+        .text--box {
+            font-size: 1em;
+            &.text--main {
+                font-size: 1.5em;
+                font-family: $title-font;
+            }
+            &.text--sub {
+                font-size: 1.2em;
+            }
+        }
+    }
+    &.wrapper--social {
+        .social-links {
+            @include flex(row);
+            a {
+                margin: 0.5em;
+                color: $font-color;
+                font-size: 2em;
+            }
         }
     }
 }

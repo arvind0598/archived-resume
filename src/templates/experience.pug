@@ -1,0 +1,34 @@
+-
+    const expdata = [
+        {
+            title : "General Secretary, Academic Head",
+            duration : "Nov 2018 - Present",
+            location : "Teach Code for Good",
+            desc : "Developed the academic course plan for teaching school students about computers and programming. Also designed, developed and set up the official website for the organization.",
+        },
+        {
+            title : "System Admin Category Head",
+            duration : "April 2018 - Present",
+            location : "TechTatva and Revels 18/19",
+            desc : "Led a team of organizers to automate various tasks, and design and develop portals to be used both internally and externally.",
+        },
+        {
+            title : "Summer Intern",
+            duration : "May 2018 - June 2018",
+            location : "Hindustan Petroleum Corporation Limited",
+            desc : "Worked on a full stack Java project. The frontend was rendered using JSP and MaterializeCSS. Data was connected with a MySQL database using Servlets. AJAX calls via jQuery were used for communicating with the backend. Import and export of data were allowed via .XLSX files.",
+        },
+    ]
+
+
+mixin experience(title, duration, location, desc)
+    .box.box--exp
+        h3.text--box.text--main #{title}
+        h6.text--box.text--sub 
+            i #{location}
+        h6.text--box.text--sub #{duration}
+        p.exp--desc #{desc}
+
+h2.text--title.text--smaller Experience
+for val in expdata
+    +experience(val.title, val.duration, val.location, val.desc)

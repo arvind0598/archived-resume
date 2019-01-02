@@ -72,7 +72,7 @@ const config = {
           collapseWhitespace: true,
           caseSensitive: true,
           removeComments: true,
-          removeEmptyElements: true,
+          removeEmptyElements: false,
         },
       })),
     new MiniCssExtractPlugin({

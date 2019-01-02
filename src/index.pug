@@ -1,17 +1,31 @@
-extends layout
+extends templates/layout
 
-mixin link-mixin(icon, url)
-    .social
-        a(href=url)
-            i(class=icon)
+block navigation
+    -
+        const navdata = [
+            {
+                name : "Welcome",
+                url : "social",
+            },
+            {
+                name : "Experience",
+                url : "experience",
+            },
+            {
+                name : "Education",
+                url : "education",
+            },
+        ]
+    //- include templates/navigation
 
 block content
-    p.text.text--title Under Construction
+    .wrapper.wrapper--social#social(data-num=data++)
+        include templates/social
+    //- include templates/placeholder
+    .wrapper.wrapper--exp#experience(data-num=data++)
+        include templates/experience
+    .wrapper.wrapper--edu#education(data-num=data++)
+        include templates/education
 
 block footer
-    .social-wrapper
-        +link-mixin('fab fa-github', 'https://github.com/arvind0598')
-        +link-mixin('fab fa-linkedin', 'https://linkedin.com/in/arvind0598')
-        +link-mixin('fas fa-at', 'mailto:arvind0598@github.io')
-
-
+    //- include templates/social

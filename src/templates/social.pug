@@ -1,0 +1,24 @@
+-
+    const socialdata = [
+        {
+            icon : "fab fa-github",
+            url : "https://github.com/arvind0598",
+        },
+        {
+            icon : "fab fa-linkedin",
+            url : "https://linkedin.com/in/arvind0598",
+        },
+        {
+            icon : "fas fa-at",
+            url : "mailto:arvind0598@github.io",
+        },
+    ]
+
+mixin link(icon, url)
+    a(href=url)
+        i(class=icon)
+
+h1.text--title Hey, I'm Arvind
+.social-links
+    for val in socialdata
+        +link(val.icon, val.url)
