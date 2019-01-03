@@ -10,14 +10,22 @@
     scroll-behavior: smooth;
 }
 
+// development only
+
+$is-dev: false;
+@if $is-dev == true {
+    .wrapper:nth-of-type(even) {
+        background: $sample-color;
+        @include below(sm) {
+            background: #111111;
+        }
+    }
+}
+
 body {
     // @include flex(column);
     background: $background-color;
     height: 100vh;
-
-    @include below(sm) {
-        background-color: $sample-color;
-    }
 }
 
 .text--title {
@@ -28,13 +36,41 @@ body {
     &.text--smaller {
         font-size: 2.5em;
     }
+    &.text--subtitle {
+        margin-top: 2em;
+        font-family: $primary-font;
+        font-size: 1.5em;
+        a {
+            color: $font-color;
+        }
+    }
 }
 
 .nav--vertical {
     position: fixed;
     top: 50%;
     right: 0;
+    width: 1em;
     transform: translate(-50%, -50%);
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        display: inline-flex;
+        font-family: $primary-font;
+        text-decoration: none;
+        width: 100%;
+        height: 1em;
+        border-radius: 100%;
+
+        background: $nav--filled-color;
+
+        .nav-label {
+           opacity: 0;
+        }
+    }
 }
 
 .wrapper {
@@ -70,7 +106,11 @@ body {
             a {
                 margin: 0.5em;
                 color: $font-color;
-                font-size: 2em;
+
+                img {
+                    height: 2em;
+                    margin: 0.5em;
+                }
             }
         }
     }

@@ -15,8 +15,12 @@ block navigation
                 name : "Education",
                 url : "education",
             },
+            {
+                name: "Portfolio",
+                url: "portfolio",
+            },
         ]
-    //- include templates/navigation
+    include templates/navigation
 
 block content
     .wrapper.wrapper--social#social(data-num=data++)
@@ -26,6 +30,10 @@ block content
         include templates/experience
     .wrapper.wrapper--edu#education(data-num=data++)
         include templates/education
+    //- .wrapper.wrapper--skills#skills(data-num=data++)
+    //-     include templates/skills
+    .wrapper.wrapper--portfolio#portfolio(data-num=data++)
+        include templates/portfolio
 
 block footer
     //- include templates/social

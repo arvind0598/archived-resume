@@ -1,0 +1,12 @@
+//- refer to navdata in index.pug
+
+mixin navlink(name, url, index)
+    li
+        a(href='#'+url data-num=index)
+             span.nav-dot
+             span.nav-label #{name}
+
+nav.nav--vertical
+    ul
+        each val, index in navdata
+            +navlink(val.name, val.url, index + 1)
