@@ -1,5 +1,5 @@
 -
-    const expdata = [
+    const expData = [
         {
             title : "General Secretary, Academic Head",
             duration : "Nov 2018 - Present",
@@ -30,5 +30,5 @@ mixin experience(title, duration, location, desc)
         p.exp--desc #{desc}
 
 h2.text--title.text--smaller Experience
-for val in expdata
+for val in expData
     +experience(val.title, val.duration, val.location, val.desc)

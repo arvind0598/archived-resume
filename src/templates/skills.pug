@@ -1,0 +1,17 @@
+-
+    const frontEndData = [
+        'HTML5', 'Pug', 'CSS3', 'SCSS', 'JS', 'jQuery' 
+    ]
+
+    const backEndData = [
+        'JSP', 'Servlets', 'NodeJS with expressJS'
+    ]
+
+mixin listLanguage(lang)
+    .box.box--skills hello #{lang}
+
+h2.text--title.text--smaller Skills
+for val in frontEndData
+    +listLanguage(val)
+for val in backEndData
+    +listLanguage(val)

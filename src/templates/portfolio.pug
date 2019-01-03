@@ -1,0 +1,38 @@
+-
+    const projectData = [
+        {
+            name: 'Smart Shopping',
+            time: 'October/November 2018',
+            url: 'https://github.com/arvind0598/smart-shop',
+            languages: [
+                'JSP with EL and JSTL',
+                'CSS/MaterializeCSS',
+                'Java Servlets',
+                'MySQL with PLSQL',
+                'jUnit Testing',
+            ],
+        },
+        {
+            name: 'TechTatva 2018',
+            time: 'September 2018',
+            url: 'random url',
+            languages: [
+                'HTML',
+                'CSS',
+                'Javascript/jQuery',
+            ],
+        },
+    ]
+
+mixin renderProject(data)
+    .box.box--project
+        h3.text--box.text--main #{data.name}
+        h6.text--box.text--sub #{data.time}
+        .text--box
+        -   let lang = data.languages.join(', ')
+            p #{lang}
+
+h2.text--title.text--smaller Portfolio
+for val in projectData
+    +renderProject(val)
+//- p hello
