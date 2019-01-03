@@ -5,12 +5,27 @@ const autoprefixer = require('autoprefixer');
 const cssNano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
 const pugRule = {
   test: /\.pug$/,
   use: ['html-loader?attrs=false', 'pug-html-loader'],
+};
+
+const fileRule = {
+  test: /\.(jpg|png|gif|svg)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'assets/',
+        useRelativePath: true,
+      },
+    },
+  ],
 };
 
 const sassRule = {
@@ -57,7 +72,7 @@ const config = {
     open: true,
   },
   module: {
-    rules: [pugRule, sassRule],
+    rules: [pugRule, sassRule, fileRule],
   },
   plugins: [
     ...fs.readdirSync('./src')
@@ -79,6 +94,12 @@ const config = {
       filename: '[name]-styles.css',
       chunkFilename: '[id].css',
     }),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets/[path][name].[ext]',
+      },
+    ]),
   ],
 };
 

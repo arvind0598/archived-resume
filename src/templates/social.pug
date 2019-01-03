@@ -1,24 +1,28 @@
 -
-    const socialdata = [
+    const socialData = [
         {
-            icon : "fab fa-github",
+            icon : "github",
             url : "https://github.com/arvind0598",
         },
         {
-            icon : "fab fa-linkedin",
+            icon : "linkedin",
             url : "https://linkedin.com/in/arvind0598",
         },
         {
-            icon : "fas fa-at",
+            icon : "mail",
             url : "mailto:arvind0598@github.io",
         },
     ]
 
 mixin link(icon, url)
     a(href=url)
-        i(class=icon)
+        //- i(class=icon)
+        img(src="/assets/"+icon+".svg")
 
 h1.text--title Hey, I'm Arvind
 .social-links
-    for val in socialdata
+    for val in socialData
         +link(val.icon, val.url)
+h2.text--title.text--subtitle 
+    | View the source code 
+    a(href='https://github.com/arvind0598/arvind0598.github.io')  here.
